@@ -8,3 +8,6 @@ A simple HTML, CSS, and JavaScript project that creates a glowing candle effect 
 2- CSS for styling and animations
 
 3- JavaScript for a dynamic flickering effect
+
+## Screenshot for Demonstration:
+![image](https://github.com/user-attachments/assets/bdefc547-8933-4c1a-9b93-60890b4c51b9)
