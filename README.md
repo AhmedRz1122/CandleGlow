@@ -11,3 +11,7 @@ A simple HTML, CSS, and JavaScript project that creates a glowing candle effect 
 
 ## Screenshot for Demonstration:
 ![image](https://github.com/user-attachments/assets/bdefc547-8933-4c1a-9b93-60890b4c51b9)
+
+## Updated code Demonstration:
+<img width="918" height="715" alt="image" src="https://github.com/user-attachments/assets/7892cd47-926e-4939-9a33-b7f6b983d5cc" />
+
