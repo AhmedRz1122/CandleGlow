@@ -1,73 +1,68 @@
+/* style.css */
 body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #1a1a1a;
-    margin: 0;
-    color: white;
 }
 
 .candle {
     position: relative;
-    width: 50px;
-    height: 150px;
-    
+    width: 60px;
+    height: 180px;
+    margin-bottom: 2rem;
 }
 
 .wax {
     width: 100%;
     height: 100%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #f5f5f5 0%, #e0e0e0 100%);
+    border-radius: 10px 10px 8px 8px;
+    box-shadow: inset -2px -2px 5px rgba(0,0,0,0.1),
+                inset 2px 2px 5px rgba(255,255,255,0.8),
+                0 10px 20px rgba(0,0,0,0.3);
 }
 
 .wick {
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
-    height: 20px;
-    background-color: #333;
-    border-radius: 2px;
+    width: 3px;
+    height: 15px;
+    background: linear-gradient(180deg, #444 0%, #222 100%);
+    border-radius: 1px;
+    z-index: 1;
 }
 
-.flame {
+.heading {
+    color: #ff9966;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin: 1rem 0 0.5rem;
+    font-size: 2rem;
+}
+
+.instruction {
+    color: #ffcc99;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Canvas styling - makes the flame render above the candle */
+canvas {
     position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 50px;
-    background-color: #ffcc00;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    animation: glow 1.5s infinite alternate, flicker 0.1s infinite;
-    box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.5);
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 20px 10px rgba(255, 204, 0, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 30px 15px rgba(255, 204, 0, 0.7);
-    }
-}
-
-@keyframes flicker {
-    0%, 100% {
-        transform: translateX(-50%) scaleY(1);
-    }
-    50% {
-        transform: translateX(-50%) scaleY(1.1);
-    }
-}
-
-.heading{
-    width: 500px;
-    text-align: center;
-    text-shadow:2px 2px #ffcc00;
-    
+    top: 0;
+    left: 0;
+    pointer-events: auto;
+    z-index: 10;
 }
